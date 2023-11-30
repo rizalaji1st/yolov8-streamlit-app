@@ -50,7 +50,7 @@ if __name__ == '__main__':
         print('valid')
         if st.button('Detect'):
             with rd.stderr(format='markdown', to=st.sidebar), st.spinner('Wait for it...'):
-                print(subprocess.run(['yolo', 'task=detect', 'mode=predict', 'model=/content/yolov8-streamlit-app/yolov8n.pt', 'conf=0.25', 'source={}'.format(source)],capture_output=True, shell=True, universal_newlines=True).stderr)
+                print(subprocess.run(['yolo', 'task=detect', 'mode=predict', 'model=yolov8n.pt', 'conf=0.25', 'source={}'.format(source)],capture_output=True, shell=True, universal_newlines=True).stderr)
 
                     
             if source_index == 0:
